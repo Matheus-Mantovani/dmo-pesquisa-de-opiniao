@@ -135,7 +135,7 @@
         app:layout_constraintBottom_toBottomOf="@id/textview_ruim"
         android:textSize="20sp"
         android:layout_marginStart="8dp"/>
-    
+
     <Button
         android:id="@+id/button_"
         android:layout_width="wrap_content"

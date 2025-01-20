@@ -21,6 +21,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.checar.ChecarActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ui.finalizar.FinalizarActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ui.participar.ParticiparActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ui.votar.VotarActivity"
+            android:exported="false"/>
+
+
     </application>
 
 </manifest>
