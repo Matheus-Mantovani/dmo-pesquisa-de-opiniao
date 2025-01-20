@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.finalizar.FinalizarActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="638dp" />
+
+    <TextView
+        android:id="@+id/textview_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultados_da_pesquisa"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_participantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numero_de_participantes"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        android:layout_marginTop="48dp"/>
+
+    <TextView
+        android:id="@+id/textview_numero_participantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/textview_participantes"
+        app:layout_constraintTop_toTopOf="@id/textview_participantes"
+        app:layout_constraintBottom_toBottomOf="@id/textview_participantes"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/textview_votos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/votos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_participantes"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/textview_otimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otimodoisponto"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_votos"/>
+
+    <TextView
+        android:id="@+id/textview_qtd_otimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textview_otimo"
+        app:layout_constraintTop_toTopOf="@id/textview_otimo"
+        app:layout_constraintBottom_toBottomOf="@id/textview_otimo"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/textview_bom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bomdoisponto"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_otimo"/>
+
+    <TextView
+        android:id="@+id/textview_qtd_bom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textview_bom"
+        app:layout_constraintTop_toTopOf="@id/textview_bom"
+        app:layout_constraintBottom_toBottomOf="@id/textview_bom"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/textview_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/regulardoisponto"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_bom"/>
+
+    <TextView
+        android:id="@+id/textview_qtd_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textview_regular"
+        app:layout_constraintTop_toTopOf="@id/textview_regular"
+        app:layout_constraintBottom_toBottomOf="@id/textview_regular"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/textview_ruim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ruimdoisponto"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_regular"/>
+
+    <TextView
+        android:id="@+id/textview_qtd_ruim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textview_ruim"
+        app:layout_constraintTop_toTopOf="@id/textview_ruim"
+        app:layout_constraintBottom_toBottomOf="@id/textview_ruim"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"/>
+    
+    <Button
+        android:id="@+id/button_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="192dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
