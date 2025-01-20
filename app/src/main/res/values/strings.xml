@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Pesquisa de opiniao</string>
+    <string name="participar_da_pesquisa">Participar da pesquisa</string>
+    <string name="checar_meu_voto">Checar meu voto</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="pesquisa_sobre_a_qualidade_do_ensino">Pesquisa sobre a qualidade do ensino</string>
+    <string name="nome_completo">Nome completo: </string>
+    <string name="prontuario">Prontuário: </string>
+    <string name="preencha_os_campos">Preencha os campos</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="votar_titulo">Avalie a qualidade do ensino da faculdade</string>
+    <string name="otimo">Ótimo</string>
+    <string name="bom">Bom</string>
+    <string name="regular">Regular</string>
+    <string name="ruim">Ruim</string>
+    <string name="enviar">Enviar</string>
+    <string name="insira_o_codigo_do_voto">Insira o código do voto</string>
+    <string name="codigo">Código: </string>
+    <string name="checar">Checar</string>
+    <string name="resultados_da_pesquisa">Resultados da pesquisa</string>
+    <string name="numero_de_participantes">Número de participantes: </string>
+    <string name="ruimdoisponto">Ruim:</string>
+    <string name="regulardoisponto">Regular:</string>
+    <string name="bomdoisponto">Bom:</string>
+    <string name="otimodoisponto">Ótimo:</string>
+    <string name="votos">Votos</string>
+    <string name="voltar">Voltar</string>
 </resources>
