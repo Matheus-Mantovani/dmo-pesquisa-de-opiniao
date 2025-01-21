@@ -79,4 +79,16 @@ class VotosDao(private val dbHelper: DatabaseHelper) {
 
         return voto
     }
+
+    fun countByOpiniao(opiniao: Opiniao): Int {
+        val db = dbHelper.readableDatabase
+        val sql = "SELECT COUNT(*) FROM ${DatabaseHelper.DATABASE_KEYS.TABLE_VOTOS_NAME} WHERE ${DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_OPINIAO} = ?"
+        val cursor = db.rawQuery(sql, arrayOf(opiniao.valor()))
+
+        val count = cursor.use {
+            cursor.getInt(0)
+        }
+
+        return count
+    }
 }
