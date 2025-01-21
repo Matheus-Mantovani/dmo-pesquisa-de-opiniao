@@ -25,4 +25,5 @@
     <string name="otimodoisponto">Ótimo:</string>
     <string name="votos">Votos</string>
     <string name="voltar">Voltar</string>
+    <string name="erro_prontuario_usado_ou_vazio">&lt;ERRO&gt; Esse prontuário já votou ou os dados estão vazios</string>
 </resources>
