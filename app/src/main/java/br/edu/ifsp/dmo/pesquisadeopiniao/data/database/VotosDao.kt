@@ -1,8 +1,10 @@
 package br.edu.ifsp.dmo.pesquisadeopiniao.data.database
 
 import android.content.ContentValues
+import android.util.Log
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.Voto
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Opiniao
+import br.edu.ifsp.dmo.pesquisadeopiniao.utils.Constants
 
 
 class VotosDao(private val dbHelper: DatabaseHelper) {
@@ -11,7 +13,9 @@ class VotosDao(private val dbHelper: DatabaseHelper) {
         val db = dbHelper.writableDatabase
         val values = ContentValues().apply {
             put(DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_ID, voto.id)
+            Log.i(Constants.KEY_TESTE, "DAO VOTO: " + voto.id)
             put(DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_OPINIAO, voto.opiniao.valor())
+            Log.i(Constants.KEY_TESTE, "DAO VOTO: " + voto.opiniao)
         }
 
         db.insert(DatabaseHelper.DATABASE_KEYS.TABLE_VOTOS_NAME, null, values)
@@ -75,6 +79,11 @@ class VotosDao(private val dbHelper: DatabaseHelper) {
             } else {
                 null
             }
+        }
+
+        if (voto != null) {
+            Log.i(Constants.KEY_TESTE, "DAO VOTO GETBYID: " + voto.id)
+            Log.i(Constants.KEY_TESTE, "DAO VOTO GETBYID: " + voto.opiniao)
         }
 
         return voto

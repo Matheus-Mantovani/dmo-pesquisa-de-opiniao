@@ -43,17 +43,17 @@ class VotarActivity : AppCompatActivity() {
             if(opiniaoSelecionada()) {
                 val opiniao = when(binding.radiogroupVotar.checkedRadioButtonId) {
                     R.id.radiobutton_otimo -> Otimo()
-                    R.id.radiobutton_otimo -> Bom()
-                    R.id.radiobutton_otimo -> Regular()
-                    R.id.radiobutton_otimo -> Ruim()
-                    else -> throw IllegalArgumentException("")
+                    R.id.radiobutton_bom -> Bom()
+                    R.id.radiobutton_regular -> Regular()
+                    R.id.radiobutton_ruim -> Ruim()
+                    else -> throw IllegalArgumentException(getString(R.string.opiniao_invalida))
                 }
 
                 Log.i(Constants.KEY_TESTE, "valor activity " + opiniao.valor())
 
                 viewModel.setOpiniao(opiniao)
 
-                Log.i(Constants.KEY_TESTE, "valor viewmodel " + viewModel.opiniao.value.toString())
+                Log.i(Constants.KEY_TESTE, "valor viewmodel " + (viewModel.opiniao.value).toString())
 
                 viewModel.adicionarVoto()
 

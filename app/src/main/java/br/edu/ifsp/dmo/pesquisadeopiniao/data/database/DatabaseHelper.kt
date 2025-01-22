@@ -3,6 +3,8 @@ package br.edu.ifsp.dmo.pesquisadeopiniao.data.database
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
+import br.edu.ifsp.dmo.pesquisadeopiniao.utils.Constants
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_KEYS.DATABASE_NAME, null, DATABASE_KEYS.DATABASE_VERSION) {
 
@@ -30,7 +32,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_KEYS
     }
 
     override fun onCreate(db: SQLiteDatabase) {
+        Log.i(Constants.KEY_TESTE,"criando tabela participantes")
         db.execSQL(CREATE_TABLE_PARTICIPANTES)
+        Log.i(Constants.KEY_TESTE,"criando tabela votos")
         db.execSQL(CREATE_TABLE_VOTOS)
     }
 
