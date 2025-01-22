@@ -15,4 +15,6 @@ class ParticipantesRepository(context: Context) {
     fun getAll() = dao.getAll()
 
     fun getByProntuario(prontuario: String) = dao.getByProntuario(prontuario)
+
+    fun getTotalParticipantes() = dao.countParticipantes()
 }

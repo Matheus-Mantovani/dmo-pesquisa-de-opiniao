@@ -73,19 +73,12 @@ class VotosDao(private val dbHelper: DatabaseHelper) {
 
         cursor.use {
             voto = if(cursor.moveToNext()) {
-                Log.i(Constants.KEY_TESTE, "DAO GETBYID VOTO VALORES CURSOR OPINIAO: " + cursor.getString(0))
-                Log.i(Constants.KEY_TESTE, "DAO GETBYID VOTO VALORES CURSOR ID: " + cursor.getString(1))
                 Voto(
                     Opiniao.toOpiniao(cursor.getString(0)),
                     cursor.getString(1))
             } else {
                 null
             }
-        }
-
-        if (voto != null) {
-            Log.i(Constants.KEY_TESTE, "DAO VOTO GETBYID: " + voto.id)
-            Log.i(Constants.KEY_TESTE, "DAO VOTO GETBYID: " + voto.opiniao)
         }
 
         return voto

@@ -9,10 +9,12 @@ import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Opiniao
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Otimo
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Regular
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Ruim
+import br.edu.ifsp.dmo.pesquisadeopiniao.data.repository.ParticipantesRepository
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.repository.VotosRepository
 
 class FinalizarViewModel(application: Application) : AndroidViewModel(application) {
     private val votosRepository: VotosRepository = VotosRepository(application)
+    private val participantesRepository: ParticipantesRepository = ParticipantesRepository(application)
 
     private val _qtdParticipantes = MutableLiveData<Int>()
     val qtdParticipantes: LiveData<Int> = _qtdParticipantes
@@ -25,7 +27,7 @@ class FinalizarViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     private fun carregarDados() {
-        _qtdParticipantes.value = votosRepository.getAll().size
+        _qtdParticipantes.value = participantesRepository.getTotalParticipantes()
 
         _opinioes.value = hashMapOf(
             Pair(Otimo(), votosRepository.countByOpiniao(Otimo())),

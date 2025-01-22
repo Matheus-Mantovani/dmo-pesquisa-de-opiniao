@@ -2,7 +2,6 @@ package br.edu.ifsp.dmo.pesquisadeopiniao.ui.checar
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import br.edu.ifsp.dmo.pesquisadeopiniao.R
 import br.edu.ifsp.dmo.pesquisadeopiniao.databinding.ActivityChecarBinding
 import br.edu.ifsp.dmo.pesquisadeopiniao.ui.main.MainActivity
-import br.edu.ifsp.dmo.pesquisadeopiniao.utils.Constants
 
 class ChecarActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChecarBinding
@@ -38,7 +36,6 @@ class ChecarActivity : AppCompatActivity() {
 
     private fun voltarParaTelaInicial() {
         val mIntent = Intent(this, MainActivity::class.java)
-        Log.i(Constants.KEY_TESTE, "voltar pra tela inicial ")
         startActivity(mIntent)
         finish()
     }

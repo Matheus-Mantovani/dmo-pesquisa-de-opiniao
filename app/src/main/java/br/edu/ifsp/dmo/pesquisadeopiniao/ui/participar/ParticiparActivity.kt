@@ -2,7 +2,6 @@ package br.edu.ifsp.dmo.pesquisadeopiniao.ui.participar
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -53,9 +52,6 @@ class ParticiparActivity : AppCompatActivity() {
         val mIntent = Intent(this, VotarActivity::class.java)
         mIntent.putExtra(Constants.KEY_NOME, viewModel.nome.value)
         mIntent.putExtra(Constants.KEY_PRONTUARIO, viewModel.prontuario.value)
-
-        Log.i(Constants.KEY_TESTE, "nome participar: " + viewModel.nome.value!!)
-        Log.i(Constants.KEY_TESTE, "prontuario participar: " + viewModel.prontuario.value!!)
 
         startActivity(mIntent)
         finish()

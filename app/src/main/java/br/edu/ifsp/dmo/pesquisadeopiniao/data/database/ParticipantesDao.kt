@@ -59,7 +59,6 @@ class ParticipantesDao(private val dbHelper: DatabaseHelper) {
 
         val where = "${DatabaseHelper.DATABASE_KEYS.COLUMN_PARTICIPANTES_PRONTUARIO} = ?"
         val whereArgs = arrayOf(prontuario)
-        Log.i(Constants.KEY_TESTE, "PRONTUARIO AAAAAAARG: " + prontuario)
 
         val cursor = db.query(
             DatabaseHelper.DATABASE_KEYS.TABLE_PARTICIPANTES_NAME,
@@ -73,18 +72,10 @@ class ParticipantesDao(private val dbHelper: DatabaseHelper) {
 
         cursor.use {
             participante = if(cursor.moveToNext()) {
-                Log.i(Constants.KEY_TESTE, "PARTICIPANTE ENCONTRADO: ")
                 Participante(cursor.getString(0), cursor.getString(1))
             } else {
                 null
             }
-        }
-
-        if (participante != null) {
-            Log.i(Constants.KEY_TESTE, "DAO PARTICIPANTE: " + participante.nome)
-            Log.i(Constants.KEY_TESTE, "DAO PARTICIPANTE: " + participante.prontuario)
-        } else {
-            Log.i(Constants.KEY_TESTE,"DAO PARTICIPANTES NULLdasd")
         }
 
         return participante
@@ -96,7 +87,7 @@ class ParticipantesDao(private val dbHelper: DatabaseHelper) {
         val cursor = db.rawQuery(sql, null)
         val count = if (cursor.moveToFirst()) cursor.getInt(0) else 0
         cursor.close()
-        Log.i(Constants.KEY_TESTE, "Total de participantes no banco: $count")
+
         return count
     }
 

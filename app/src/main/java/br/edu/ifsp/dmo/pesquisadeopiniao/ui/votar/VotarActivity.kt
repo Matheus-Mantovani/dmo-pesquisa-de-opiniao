@@ -36,9 +36,7 @@ class VotarActivity : AppCompatActivity() {
 
 
     private fun configOnClickListener() {
-        Log.i(Constants.KEY_TESTE, "configOnClickListener")
         binding.buttonEnviar.setOnClickListener {
-            Log.i(Constants.KEY_TESTE, "dentro de setOnClickListener")
             if(opiniaoSelecionada()) {
                 val opiniao = when(binding.radiogroupVotar.checkedRadioButtonId) {
                     R.id.radiobutton_otimo -> Otimo()
@@ -48,11 +46,7 @@ class VotarActivity : AppCompatActivity() {
                     else -> throw IllegalArgumentException(getString(R.string.opiniao_invalida))
                 }
 
-                Log.i(Constants.KEY_TESTE, "valor activity " + opiniao.valor())
-
                 viewModel.setOpiniao(opiniao)
-
-                Log.i(Constants.KEY_TESTE, "valor viewmodel " + (viewModel.opiniao.value).toString())
 
                 viewModel.adicionarVoto()
 
@@ -61,7 +55,6 @@ class VotarActivity : AppCompatActivity() {
                 Log.i(Constants.KEY_TESTE, "id: " + viewModel.id.value.toString())
 
             } else {
-                Log.i(Constants.KEY_TESTE, "opcao nao selecionada")
                 Toast.makeText(
                     this,
                     getString(R.string.selecione_uma_das_opcoes),
@@ -73,7 +66,6 @@ class VotarActivity : AppCompatActivity() {
 
     private fun voltarParaTelaInicial() {
         val mIntent = Intent(this, MainActivity::class.java)
-        Log.i(Constants.KEY_TESTE, "voltar pra tela inicial ")
         startActivity(mIntent)
         finish()
     }
@@ -92,7 +84,6 @@ class VotarActivity : AppCompatActivity() {
             }
             .setOnDismissListener { voltarParaTelaInicial() }
             .show()
-        Log.i(Constants.KEY_TESTE, "dialog na tela ")
     }
 
     private fun opiniaoSelecionada(): Boolean {
@@ -108,9 +99,6 @@ class VotarActivity : AppCompatActivity() {
             if(nome != null && prontuario != null) {
                 viewModel.setNome(nome)
                 viewModel.setProntuario(prontuario)
-
-                Log.i(Constants.KEY_TESTE, "nome votar: " + viewModel.nome.value!!)
-                Log.i(Constants.KEY_TESTE, "prontuario votar: " + viewModel.prontuario.value!!)
             }
         } else {
             Toast.makeText(
