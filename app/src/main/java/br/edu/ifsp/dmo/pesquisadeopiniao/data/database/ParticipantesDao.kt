@@ -1,9 +1,7 @@
 package br.edu.ifsp.dmo.pesquisadeopiniao.data.database
 
 import android.content.ContentValues
-import android.util.Log
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.Participante
-import br.edu.ifsp.dmo.pesquisadeopiniao.utils.Constants
 
 class ParticipantesDao(private val dbHelper: DatabaseHelper) {
 
@@ -11,9 +9,7 @@ class ParticipantesDao(private val dbHelper: DatabaseHelper) {
         val db = dbHelper.writableDatabase
         val values = ContentValues().apply {
             put(DatabaseHelper.DATABASE_KEYS.COLUMN_PARTICIPANTES_PRONTUARIO, participante.prontuario)
-            Log.i(Constants.KEY_TESTE,"DAO: " + participante.prontuario)
             put(DatabaseHelper.DATABASE_KEYS.COLUMN_PARTICIPANTES_NOME, participante.nome)
-            Log.i(Constants.KEY_TESTE,"DAO: " + participante.nome)
         }
 
         db.insert(DatabaseHelper.DATABASE_KEYS.TABLE_PARTICIPANTES_NAME, null, values)
