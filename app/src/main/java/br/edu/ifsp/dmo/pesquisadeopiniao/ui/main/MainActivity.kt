@@ -3,7 +3,6 @@ package br.edu.ifsp.dmo.pesquisadeopiniao.ui.main
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import br.edu.ifsp.dmo.pesquisadeopiniao.R
 import br.edu.ifsp.dmo.pesquisadeopiniao.databinding.ActivityMainBinding
 import br.edu.ifsp.dmo.pesquisadeopiniao.ui.checar.ChecarActivity
 import br.edu.ifsp.dmo.pesquisadeopiniao.ui.finalizar.FinalizarActivity

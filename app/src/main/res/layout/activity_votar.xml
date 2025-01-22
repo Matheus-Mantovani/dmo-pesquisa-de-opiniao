@@ -38,28 +38,28 @@
 
         <RadioButton
             android:id="@+id/radiobutton_otimo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/otimo"
             android:textSize="20sp"/>
 
         <RadioButton
             android:id="@+id/radiobutton_bom"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bom"
             android:textSize="20sp"/>
 
         <RadioButton
             android:id="@+id/radiobutton_regular"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/regular"
             android:textSize="20sp"/>
 
         <RadioButton
             android:id="@+id/radiobutton_ruim"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/ruim"
             android:textSize="20sp"/>

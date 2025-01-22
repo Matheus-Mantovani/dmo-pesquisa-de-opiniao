@@ -6,7 +6,6 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.core.widget.addTextChangedListener
 import br.edu.ifsp.dmo.pesquisadeopiniao.R
 import br.edu.ifsp.dmo.pesquisadeopiniao.databinding.ActivityParticiparBinding
 import br.edu.ifsp.dmo.pesquisadeopiniao.ui.votar.VotarActivity
@@ -54,6 +53,9 @@ class ParticiparActivity : AppCompatActivity() {
         val mIntent = Intent(this, VotarActivity::class.java)
         mIntent.putExtra(Constants.KEY_NOME, viewModel.nome.value)
         mIntent.putExtra(Constants.KEY_PRONTUARIO, viewModel.prontuario.value)
+
+        Log.i(Constants.KEY_TESTE, "nome participar: " + viewModel.nome.value!!)
+        Log.i(Constants.KEY_TESTE, "prontuario participar: " + viewModel.prontuario.value!!)
 
         startActivity(mIntent)
         finish()

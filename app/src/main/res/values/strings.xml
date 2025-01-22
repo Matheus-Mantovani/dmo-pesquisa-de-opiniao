@@ -26,4 +26,12 @@
     <string name="votos">Votos</string>
     <string name="voltar">Voltar</string>
     <string name="erro_prontuario_usado_ou_vazio">&lt;ERRO&gt; Esse prontuário já votou ou os dados estão vazios</string>
+    <string name="erro_ao_recuperar_nome_prontuario">&lt;ERRO&gt; Falha ao recuperar nome e prontuario</string>
+    <string name="selecione_uma_das_opcoes">Selecione uma das opções</string>
+    <string name="opiniao_invalida">Opinião inválida</string>
+    <string name="fechar">Fechar</string>
+    <string name="copiar_id">Copiar Id</string>
+    <string name="id_copiado">ID Copiado</string>
+    <string name="id_copiado_para_a_area_de_transferencia">ID copiado para a área de transferência</string>
+    <string name="seu_id">SEU ID</string>
 </resources>

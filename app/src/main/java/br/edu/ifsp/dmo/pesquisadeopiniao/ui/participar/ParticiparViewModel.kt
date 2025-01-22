@@ -9,7 +9,7 @@ import br.edu.ifsp.dmo.pesquisadeopiniao.data.repository.ParticipantesRepository
 import br.edu.ifsp.dmo.pesquisadeopiniao.utils.Constants
 
 class ParticiparViewModel(application: Application) : AndroidViewModel(application) {
-    private var repository: ParticipantesRepository = ParticipantesRepository(application)
+    private val repository: ParticipantesRepository = ParticipantesRepository(application)
 
     private val _nome = MutableLiveData<String>()
     val nome: LiveData<String> = _nome
@@ -38,6 +38,8 @@ class ParticiparViewModel(application: Application) : AndroidViewModel(applicati
             Log.i(Constants.KEY_TESTE, "repo nulo")
             return false
         }
+
+        Log.i(Constants.KEY_TESTE, "prontuario valido")
 
         return true
     }
