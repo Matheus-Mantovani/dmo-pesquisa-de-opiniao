@@ -15,7 +15,6 @@ import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Bom
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Otimo
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Regular
 import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Ruim
-import br.edu.ifsp.dmo.pesquisadeopiniao.data.model.strategy.Opiniao
 import br.edu.ifsp.dmo.pesquisadeopiniao.databinding.ActivityVotarBinding
 import br.edu.ifsp.dmo.pesquisadeopiniao.ui.main.MainActivity
 import br.edu.ifsp.dmo.pesquisadeopiniao.utils.Constants

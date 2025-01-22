@@ -34,4 +34,6 @@
     <string name="id_copiado">ID Copiado</string>
     <string name="id_copiado_para_a_area_de_transferencia">ID copiado para a área de transferência</string>
     <string name="seu_id">SEU ID</string>
+    <string name="sua_opiniao">Sua opinião</string>
+    <string name="id_nao_encontrado">ID não encontrado</string>
 </resources>
