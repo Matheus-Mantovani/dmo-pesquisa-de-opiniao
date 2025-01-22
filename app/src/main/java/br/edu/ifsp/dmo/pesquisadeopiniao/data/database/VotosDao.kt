@@ -24,8 +24,8 @@ class VotosDao(private val dbHelper: DatabaseHelper) {
     fun getAll(): List<Voto> {
         val db = dbHelper.readableDatabase
         val columns = arrayOf(
-            DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_ID,
-            DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_OPINIAO
+            DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_OPINIAO,
+            DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_ID
         )
 
         val cursor = db.query(DatabaseHelper.DATABASE_KEYS.TABLE_VOTOS_NAME,
@@ -97,7 +97,11 @@ class VotosDao(private val dbHelper: DatabaseHelper) {
         val cursor = db.rawQuery(sql, arrayOf(opiniao.valor()))
 
         val count = cursor.use {
-            cursor.getInt(0)
+            if(cursor.moveToNext()) {
+                cursor.getInt(0)
+            } else {
+                0
+            }
         }
 
         return count
