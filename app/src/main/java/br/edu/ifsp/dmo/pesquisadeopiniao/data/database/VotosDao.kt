@@ -15,7 +15,7 @@ class VotosDao(private val dbHelper: DatabaseHelper) {
             put(DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_ID, voto.id)
             Log.i(Constants.KEY_TESTE, "DAO VOTO: " + voto.id)
             put(DatabaseHelper.DATABASE_KEYS.COLUMN_VOTOS_OPINIAO, voto.opiniao.valor())
-            Log.i(Constants.KEY_TESTE, "DAO VOTO: " + voto.opiniao)
+            Log.i(Constants.KEY_TESTE, "DAO VOTO: " + (voto.opiniao).valor())
         }
 
         db.insert(DatabaseHelper.DATABASE_KEYS.TABLE_VOTOS_NAME, null, values)

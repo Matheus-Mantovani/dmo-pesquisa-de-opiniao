@@ -12,7 +12,7 @@ class ParticipantesDao(private val dbHelper: DatabaseHelper) {
         val values = ContentValues().apply {
             put(DatabaseHelper.DATABASE_KEYS.COLUMN_PARTICIPANTES_PRONTUARIO, participante.prontuario)
             Log.i(Constants.KEY_TESTE,"DAO: " + participante.prontuario)
-            put(DatabaseHelper.DATABASE_KEYS.TABLE_PARTICIPANTES_NAME, participante.nome)
+            put(DatabaseHelper.DATABASE_KEYS.COLUMN_PARTICIPANTES_NOME, participante.nome)
             Log.i(Constants.KEY_TESTE,"DAO: " + participante.nome)
         }
 
@@ -59,6 +59,7 @@ class ParticipantesDao(private val dbHelper: DatabaseHelper) {
 
         val where = "${DatabaseHelper.DATABASE_KEYS.COLUMN_PARTICIPANTES_PRONTUARIO} = ?"
         val whereArgs = arrayOf(prontuario)
+        Log.i(Constants.KEY_TESTE, "PRONTUARIO AAAAAAARG: " + prontuario)
 
         val cursor = db.query(
             DatabaseHelper.DATABASE_KEYS.TABLE_PARTICIPANTES_NAME,
@@ -88,4 +89,15 @@ class ParticipantesDao(private val dbHelper: DatabaseHelper) {
 
         return participante
     }
+
+    fun countParticipantes(): Int {
+        val db = dbHelper.readableDatabase
+        val sql = "SELECT COUNT(*) FROM ${DatabaseHelper.DATABASE_KEYS.TABLE_PARTICIPANTES_NAME}"
+        val cursor = db.rawQuery(sql, null)
+        val count = if (cursor.moveToFirst()) cursor.getInt(0) else 0
+        cursor.close()
+        Log.i(Constants.KEY_TESTE, "Total de participantes no banco: $count")
+        return count
+    }
+
 }
