@@ -8,13 +8,6 @@
     android:padding="8dp"
     tools:context=".ui.main.MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="420dp" />
-
     <TextView
         android:id="@+id/textview_titulo"
         android:layout_width="wrap_content"
@@ -25,18 +18,18 @@
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/guideline_button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_participar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/participar_da_pesquisa"
+        app:layout_constraintTop_toBottomOf="@id/textview_titulo"
         app:layout_constraintBottom_toTopOf="@+id/button_checar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_button" />
+        android:layout_marginTop="160dp"/>
 
     <Button
         android:id="@+id/button_checar"

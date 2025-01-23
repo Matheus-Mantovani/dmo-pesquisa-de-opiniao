@@ -8,13 +8,6 @@
     android:padding="8dp"
     tools:context=".ui.finalizar.FinalizarActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="638dp" />
-
     <TextView
         android:id="@+id/textview_titulo"
         android:layout_width="wrap_content"
@@ -23,7 +16,6 @@
         android:textAlignment="center"
         android:textSize="32sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +27,7 @@
         android:text="@string/numero_de_participantes"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textview_titulo"
         android:layout_marginTop="48dp"/>
 
     <TextView
@@ -144,7 +136,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="192dp"/>
+        app:layout_constraintTop_toTopOf="@id/textview_ruim"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
